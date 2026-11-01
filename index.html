@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZapGestor AO - ITEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>ZapGestor AO</h1>
+            <p>Gerador de Atendimento Rápido para WhatsApp</p>
+        </header>
+
+        <main>
+            <section class="formulario">
+                <label for="telefone">Número de Telemóvel (Angola):</label>
+                <input type="text" id="telefone" placeholder="Ex: 923123456">
+
+                <label for="mensagem">Mensagem Automática:</label>
+                <textarea id="mensagem" placeholder="Escreva a mensagem para o cliente..."></textarea>
+
+                <div class="botoes">
+                    <button id="btnGerar" class="btn-primary">Gerar e Abrir Link</button>
+                    <button id="btnSalvar" class="btn-secondary">Guardar Dados</button>
+                </div>
+            </section>
+
+            <!-- CAIXA ONDE O LINK GERADO VAI APARECER -->
+            <section class="resultado-box" id="caixaResultado" style="display: none;">
+                <h3>Link Gerado com Sucesso:</h3>
+                <input type="text" id="linkGeradoInput" readonly>
+                <a href="#" id="linkDireto" target="_blank" class="btn-whatsapp">Abrir Conversa no WhatsApp</a>
+            </section>
+
+            <section class="preview-container">
+                <h3>Pré-visualização do Chat:</h3>
+                <div class="balao-whatsapp">
+                    <p id="previewTexto">A sua mensagem vai aparecer aqui...</p>
+                    <span class="hora">12:00</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
